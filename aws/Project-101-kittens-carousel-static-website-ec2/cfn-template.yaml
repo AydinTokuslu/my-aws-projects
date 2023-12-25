@@ -27,8 +27,7 @@ Resources:
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
       Tags:
-        -                        
-          Key: Name
+        - Key: Name
           Value: !Sub Web Server of ${AWS::StackName} Stack
       UserData: 
         Fn::Base64: |
