@@ -4,6 +4,11 @@ Description: |
   is downloaded from my Public Github repository, then deployed on Apache Web Server.
 
 Resources:
-  
-  
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP for Apache Web Server and SSH for secure connection.
+      SecurityGroupIngress:
+        - Security Group Rule
+    
 Outputs:
