@@ -48,6 +48,9 @@ Resources:
           wget ${FOLDER}/templates/result.html
           cd ..
           python3 app.py
+      Tags:
+        - Key: Name
+          Value: !Sub Web Server of ${AWS::StackName} Stack
 
   
 Outputs:
