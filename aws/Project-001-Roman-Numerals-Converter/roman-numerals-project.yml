@@ -6,10 +6,7 @@ Description: |
   custom security group allowing http connections on port 80 and 
   SSH connection on port 22. Roman Numerals Converter Application is 
   downloaded from Github repository, then installed on Flask.
-Parameters:
-  KeyName:
-    Description: Enter the name of your key pair for SSH Connections.
-    Type: AWS::EC2::KeyPair::KeyName
+
   
 Resources:
   WebServerSecurityGroup:
@@ -29,9 +26,9 @@ Resources:
   WebServerHost:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: ami-02538f8925e3aa27a
+      ImageId: ami-00b8917ae86a424c9
       InstanceType: t2.micro
-      KeyName: !Ref KeyName
+      KeyName: first_key
       SecurityGroupIds:
         - !Ref WebServerSecurityGroup
       UserData: !Base64 |
