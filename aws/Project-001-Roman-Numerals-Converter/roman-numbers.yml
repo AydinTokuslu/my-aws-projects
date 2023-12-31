@@ -52,5 +52,9 @@ Resources:
         - Key: Name
           Value: !Sub Web Server of ${AWS::StackName} Stack
 
-  
-Outputs:
+Outputs: 
+  WebsiteURL:
+    Value: !Sub 
+      - http://${PublicAddress}
+      - PublicAddress: !GetAtt WebServerHost.PublicDnsName
+    Description: Roman Numerals Converter Application URL
