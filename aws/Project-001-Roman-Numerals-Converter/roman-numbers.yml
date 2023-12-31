@@ -7,7 +7,24 @@ Description: |
   SSH connection on port 22. Roman Numerals Converter Application is 
   downloaded from Github repository, then installed on Flask.
 Parameters:
+  KeyName:
+    Description: Enter the name of your key pair for SSH Connections.
+    Type: AWS::EC2::KeyPair::KeyName
   
 Resources:
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties: 
+      GroupDescription: Enable HTTP for Flask Web Server and SSH port to secure reach to my EC2
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+
   
 Outputs:
