@@ -218,11 +218,12 @@ Please follow and apply the instructions in the developer_notes.txt.
 ## Step 9: Create NAT Instance in Public Subnet
 
 To launch NAT instance, go to the EC2 console and click the create button.
+saat 0400
 
 ```text
 write "NAT" into the filter box
 #select NAT Instance `amzn-ami-vpc-nat-hvm-2018.03.0.20210915.x86_64-ebs`
-select NAT Instance `amzn-ami-vpc-nat-2018.03.0.20220503.0-x86_64-ebs`
+select NAT Instance `amzn-ami-vpc-nat-2018.03.0.20220503.0-x86_64-ebs` BUNU SEÇ
 `ami-0780b09c119334593`
 Instance Type: t2.micro
 Configure Instance Details
@@ -264,7 +265,7 @@ To create Launch Template, go to the EC2 console and select `Launch Template` on
 ```bash
 Launch template name                : aws_capstone_launch_template
 Template version description        : Blog Web Page version 1
-Amazon machine image (AMI)          : Ubuntu 18.04 (ami-0263e4deb427da90e)
+Amazon machine image (AMI)          : Ubuntu 18.04 (ami-0263e4deb427da90e)BU AMI ile ara
 Instance Type                       : t2.micro
 Key Pair                            : mykey.pem
 Network Platform                    : VPC
